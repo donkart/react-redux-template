@@ -1,31 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import reduxThunk from 'redux-thunk';
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+import reduxThunk from "redux-thunk";
 
-import reducers from './reducers'
+import reducers from "./reducers";
 
-import App from './components/App';
-import MyRetirement from './components/MyRetirement';
+import App from "./components/App";
+import LandingPage from "./components/LandingPage";
 
-import './index.css';
+import * as routes from "routes";
 
-const store = createStore(
-    reducers,
-    {},
-    applyMiddleware(reduxThunk)
-);
+import "./index.css";
+
+const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
-    <Provider store={store}>
-        <BrowserRouter>
-            <App>
-                <Route path="/" exact component={MyRetirement} />
-            </App>
-        </BrowserRouter>
-    </Provider>,
-    document.querySelector('#root')
+  <Provider store={store}>
+    <BrowserRouter>
+      <App>
+        <Route path={routes.LANDING_PAGE} exact component={LandingPage} />
+      </App>
+    </BrowserRouter>
+  </Provider>,
+  document.querySelector("#root")
 );
