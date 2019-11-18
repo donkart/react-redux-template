@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-
 import { connect } from "react-redux";
 
 import { Layout, Menu, Icon } from "antd";
+
 const { Header } = Layout;
 
 class AppHeader extends Component {

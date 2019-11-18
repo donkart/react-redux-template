@@ -1,10 +1,10 @@
+import _ from "lodash";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import * as actions from "../actions";
-
-import _ from "lodash";
-
 import { Form, Select } from "antd";
+
+import * as actions from "actions";
+
 import EditModal from "./EditModal";
 
 const { Option } = Select;
@@ -60,7 +60,4 @@ function mapStateToProps(state) {
   return { accounts: state.accounts, form: state.form };
 }
 
-export default connect(
-  mapStateToProps,
-  actions
-)(AccountNumberModal);
+export default connect(mapStateToProps, actions)(AccountNumberModal);

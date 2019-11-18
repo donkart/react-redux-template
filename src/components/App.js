@@ -1,10 +1,10 @@
 import React from "react";
-
-import "./App.css";
+import { Layout, Button } from "antd";
 
 import AppHeader from "./AppHeader";
 
-import { Layout, Button } from "antd";
+import "./App.css";
+
 const { Footer } = Layout;
 
 export default ({ children }) => {

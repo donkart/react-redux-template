@@ -1,0 +1,14 @@
+.lineFloat {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formLine {
+  display: flex;
+  justify-content: space-between;
+  line-height: 3em;
+}
+
+.blueValue {
+  color: rgb(128, 168, 208);
+}
